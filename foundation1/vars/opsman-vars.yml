@@ -15,7 +15,7 @@ opsman_ssh_password: ((opsman_ssh_password))
 opsman_ssh_public_key: ((opsman_ssh_key.public_key))
 opsman_hostname: opsmanager
 opsman_network: 'VM Network'
-opsman_mask: 255.255.255.0
+opsman_netmask: 255.255.255.0
 opsman_gateway: 10.197.44.1
 opsman_vm_name: Ops_Manager_Test
 opsman_memory: 8
