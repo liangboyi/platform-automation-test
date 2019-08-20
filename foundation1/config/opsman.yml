@@ -7,7 +7,7 @@ opsman-configuration:
       password: ((vcenter_password))
       datastore: ((vcenter_datastore))
       ca_cert: ((vcenter_ca_cert))
-      host: ((vcenter_cluster))                     # vCenter host to deploy Ops Manager in
+      host: ((vcenter_host))                     # vCenter host to deploy Ops Manager in
       datacenter: ((vcenter_datacenter))
       resource_pool: /((vcenter_datacenter))/host/((vcenter_cluster))/Resources/((vcenter_resource_pool))     # or /<Data Center Name>/host/<Cluster Name>
       folder: /((vcenter_datacenter))/vm/((vcenter_folder))

@@ -3,6 +3,7 @@ vcenter_username: ((vcenter_username))
 vcenter_password: ((vcenter_password))
 vcenter_datastore: LUN01
 vcenter_ca_cert: ""
+vcenter_host: ""
 vcenter_cluster: Cluster
 vcenter_datacenter: Datacenter
 vcenter_resource_pool: MGMT
