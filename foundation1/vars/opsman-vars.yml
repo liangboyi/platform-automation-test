@@ -11,6 +11,9 @@ disk_type: thin
 opsman_ip: 10.197.44.60
 opsman_dns: 10.192.2.10
 opsman_ntp: time.svc.pivotal.io
+opsman_ssh_password: ((opsman_ssh_password))
+opsman_ssh_public_key: ((opsman_ssh_key.public_key))
+opsman_hostname: opsmanager
 opsman_network: 255.255.255.0
 opsman_gateway: 10.197.44.1
 opsman_vm_name: Ops_Manager_Test
