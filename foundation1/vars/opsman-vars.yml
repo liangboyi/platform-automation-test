@@ -5,6 +5,7 @@ vcenter_datastore: LUN01
 vcenter_ca_cert: ""
 vcenter_cluster: Cluster
 vcenter_datacenter: Datacenter
+vcenter_resource_pool: MGMT
 vcenter_folder: ""
 vcenter_insecure_flag: 1
 disk_type: thin
