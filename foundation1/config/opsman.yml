@@ -1,0 +1,27 @@
+---
+opsman-configuration:
+  vsphere:
+    vcenter:
+      url: ((vcenter_url))
+      username: ((vcenter_username))
+      password: ((vcenter_password))
+      datastore: ((vcenter_datastore))
+      ca_cert: ((vcenter_ca_cert))
+      host: ((vcenter_cluster))                     # vCenter host to deploy Ops Manager in
+      datacenter: ((vcenter_datacenter))
+      resource_pool: /((vcenter_datacenter))/host/((vcenter_cluster))/Resources/ResPool # or /<Data Center Name>/host/<Cluster Name>
+      folder: /((vcenter_datacenter))/vm/((vcenter_folder))
+      insecure: ((vcenter_insecure_flag))                            # default: 0 (secure); 1 (insecure)
+    disk_type: ((disk_type))                          # example: thin|thick
+    private_ip: ((opsman_ip))
+    dns: ((opsman_dns))
+    ntp: ((opsman_ntp))                     # example: ntp.ubuntu.com
+    ssh_password: ((opsman_ssh_password))
+    ssh_public_key: ((opsman_ssh_public_key))           # for Ops Manager >= 2.3
+    hostname: ((opsman_hostname))
+    network: ((opsman_network))                 # vcenter network to deploy to
+    netmask: ((opsman_netmask))
+    gateway: ((opsman_gateway))
+    vm_name: ((opsman_vm_name))                     # default: Ops_Manager
+    memory: ((opsman_memory))                                # default: 8 GB
+    cpu: ((opsman_cpu))                                   # default: 1
