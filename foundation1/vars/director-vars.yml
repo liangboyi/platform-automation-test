@@ -82,6 +82,7 @@ properties-configuration:
     resurrector_enabled: true
     retry_bosh_deploys: true
   security_configuration:
+    generate_vm_passwords: true
     opsmanager_root_ca_trusted_certs: true
     trusted_certificates: ""
   syslog_configuration:
