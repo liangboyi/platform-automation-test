@@ -1,0 +1,95 @@
+az-configuration:
+- name: MGMT
+  clusters:
+  - cluster: Cluster
+    resource_pool: MGMT
+- name: AZ1
+  clusters:
+  - cluster: Cluster
+    resource_pool: AZ1
+- name: AZ2
+  clusters:
+  - cluster: Cluster
+    resource_pool: AZ2
+- name: AZ3
+  clusters:
+  - cluster: Cluster
+    resource_pool: AZ3
+
+iaas-configurations:
+  bosh_disk_path: pcf_disk
+  bosh_template_folder: pcf_template
+  bosh_vm_folder: pcf_vms
+  datacenter: Datacenter
+  disk_type: thin
+  ephemeral_datastores_string: LUN01
+  name: default
+  nsx_address: 10.197.44.20
+  nsx_ca_certificate: ((nsx_ca_certificate.certificate))
+  nsx_mode: nsx-t
+  nsx_networking_enabled: true
+  nsx_username: ((nsx_username))
+  nsx_password: ((nsx_password))
+  persistent_datastores_string: LUN01 
+  ssl_verification_enabled: false
+  vcenter_host: vcsa-01.haas-426.pez.pivotal.io
+  vcenter_username: ((vcenter_username))
+  vcenter_password: ((vcenter_password))
+  
+network-assignment:
+  network_name: Infra
+  singleton_availability_zone: AZ1
+
+networks-configuration:
+  icmp_checks_enabled: true
+  networks:
+  - name: Infra
+    subnets:
+    - iaas_identifier: VM Network
+      cidr: 10.197.44.0/24
+      dns: 10.192.2.10,10.192.2.11
+      gateway: 10.197.44.1
+      reserved_ip_ranges: 10.197.44.1-10.197.44.70,10.197.44.81-10.197.44.255
+      availability_zone_names:
+      - MGMT
+  - name: PAS
+    subnets:
+    - iaas_identifier: VM Network
+      cidr: 10.197.44.0/24
+      dns: 10.192.2.10,10.192.2.11
+      gateway: 10.197.44.1
+      reserved_ip_ranges: 10.197.44.1-10.197.44.80,10.197.44.181-10.197.44.255
+      availability_zone_names:
+      - AZ1
+      - AZ2
+      - AZ3
+  - name: PAS-Service
+    subnets:
+    - iaas_identifier: VM Network
+      cidr: 10.197.44.0/24
+      dns: 10.192.2.10,10.192.2.11
+      gateway: 10.197.44.1
+      reserved_ip_ranges: 10.197.44.1-10.197.44.180,10.197.44.250-10.197.44.255
+      availability_zone_names:
+      - AZ1
+      - AZ2
+      - AZ3
+
+properties-configuration:
+  director_configuration:
+    ntp_servers_string: time.svc.pivotal.io
+    post_deploy_enabled: true
+    resurrector_enabled: true
+    retry_bosh_deploys: true
+  security_configuration:
+    opsmanager_root_ca_trusted_certs: true
+    trusted_certificates: ""
+  syslog_configuration:
+    enabled: false
+
+resource-configuration:
+  director:
+    instances: automatic
+    persistent_disk: automatic
+    instance_type: automatic
+
