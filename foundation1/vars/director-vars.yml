@@ -37,7 +37,7 @@ iaas-configurations:
   vcenter_password: ((vcenter_password))
   
 network-assignment:
-  network_name: Infra
+  network: Infra
   singleton_availability_zone: AZ1
 
 networks-configuration:
