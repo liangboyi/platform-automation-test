@@ -30,7 +30,7 @@ network-assignment:
 
 networks-configuration:
   icmp_checks_enabled: ((networks-configuration.icmp_checks_enabled))
-  networks: ((networks-configuration.network))
+  networks: ((networks-configuration.networks))
 
 properties-configuration:
   director_configuration:
