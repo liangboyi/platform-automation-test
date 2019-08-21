@@ -60,9 +60,9 @@ properties-configuration:
     excluded_recursors: []
     handlers: []
   security_configuration:
-    generate_vm_passwords: ((properties-configuration_security_configuration_generate_vm_passwords))
-    opsmanager_root_ca_trusted_certs: ((security_configuration.opsmanager_root_ca_trusted_certs))
-    trusted_certificates: ((security_configuration.trusted_certificates))
+    generate_vm_passwords: ((properties-configuration.security_configuration.generate_vm_passwords))
+    opsmanager_root_ca_trusted_certs: ((properties-configuration.security_configuration.opsmanager_root_ca_trusted_certs))
+    trusted_certificates: ((properties-configuration.security_configuration.trusted_certificates))
   syslog_configuration:
     enabled: false
 resource-configuration:
