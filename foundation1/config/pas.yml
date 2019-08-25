@@ -36,7 +36,7 @@ product-properties:
   .ha_proxy.skip_cert_verify:
     value: true
   .ha_proxy.static_ips:
-    value: 10.3.123.20
+    value: 
   .mysql.cli_history:
     value: true
   .mysql.max_connections:
