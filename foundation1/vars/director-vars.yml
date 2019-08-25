@@ -3,25 +3,20 @@ az-configuration:
   clusters:
   - cluster: Cluster
     resource_pool: MGMT
-  iaas_configuration_guid: 42d23545be85d3745811
 - name: AZ1
   clusters:
   - cluster: Cluster
     resource_pool: AZ1
-  iaas_configuration_guid: 42d23545be85d3745811
 - name: AZ2
   clusters:
   - cluster: Cluster
     resource_pool: AZ2
-  iaas_configuration_guid: 42d23545be85d3745811
 - name: AZ3
   clusters:
   - cluster: Cluster
     resource_pool: AZ3
-  iaas_configuration_guid: 42d23545be85d3745811
 
 iaas-configurations:
-  guid: 42d23545be85d3745811
   bosh_disk_path: pcf_disk
   bosh_template_folder: pcf_template
   bosh_vm_folder: pcf_vms
