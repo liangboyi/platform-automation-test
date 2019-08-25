@@ -23,7 +23,7 @@ iaas-configurations:
   datacenter: Datacenter
   disk_type: thin
   ephemeral_datastores_string: LUN01
-  name: my-iaas-config
+  name: default
   nsx_address: 10.197.44.20
   nsx_ca_certificate: ((nsx_ca_certificate.certificate))
   nsx_mode: nsx-t
