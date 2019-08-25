@@ -2,6 +2,7 @@ az-configuration: ((az-configuration))
 
 iaas-configurations:
 - additional_cloud_properties: {}
+  guid: ((iaas-configurations.guid))
   bosh_disk_path: ((iaas-configurations.bosh_disk_path))
   bosh_template_folder: ((iaas-configurations.bosh_template_folder))
   bosh_vm_folder: ((iaas-configurations.bosh_vm_folder))

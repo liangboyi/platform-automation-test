@@ -3,27 +3,32 @@ az-configuration:
   clusters:
   - cluster: Cluster
     resource_pool: MGMT
+  iaas_configuration_guid: 42d23545be85d3745811
 - name: AZ1
   clusters:
   - cluster: Cluster
     resource_pool: AZ1
+  iaas_configuration_guid: 42d23545be85d3745811
 - name: AZ2
   clusters:
   - cluster: Cluster
     resource_pool: AZ2
+  iaas_configuration_guid: 42d23545be85d3745811
 - name: AZ3
   clusters:
   - cluster: Cluster
     resource_pool: AZ3
+  iaas_configuration_guid: 42d23545be85d3745811
 
 iaas-configurations:
+  guid: 42d23545be85d3745811
   bosh_disk_path: pcf_disk
   bosh_template_folder: pcf_template
   bosh_vm_folder: pcf_vms
   datacenter: Datacenter
   disk_type: thin
   ephemeral_datastores_string: LUN01
-  name: default
+  name: my-iaas-config
   nsx_address: 10.197.44.20
   nsx_ca_certificate: ((nsx_ca_certificate.certificate))
   nsx_mode: nsx-t
