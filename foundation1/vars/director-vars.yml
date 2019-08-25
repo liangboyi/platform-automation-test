@@ -1,20 +1,20 @@
 az-configuration:
-- name: MGMT
-  clusters:
-  - cluster: Cluster
-    resource_pool: MGMT
-- name: AZ1
-  clusters:
-  - cluster: Cluster
-    resource_pool: AZ1
-- name: AZ2
-  clusters:
-  - cluster: Cluster
-    resource_pool: AZ2
 - name: AZ3
   clusters:
   - cluster: Cluster
     resource_pool: AZ3
+- name: AZ2
+  clusters:
+  - cluster: Cluster
+    resource_pool: AZ2
+- name: AZ1
+  clusters:
+  - cluster: Cluster
+    resource_pool: AZ1
+- name: MGMT
+  clusters:
+  - cluster: Cluster
+    resource_pool: MGMT
 
 iaas-configurations:
   bosh_disk_path: pcf_disk
@@ -38,7 +38,7 @@ iaas-configurations:
   
 network-assignment:
   network: Infra
-  singleton_availability_zone: AZ1
+  singleton_availability_zone: MGMT
 
 networks-configuration:
   icmp_checks_enabled: true
