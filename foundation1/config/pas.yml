@@ -397,7 +397,7 @@ resource-config:
       id: automatic
     max_in_flight: 1
   ha_proxy:
-    instances: 1
+    instances: automatic
     instance_type:
       id: automatic
     max_in_flight: 1
@@ -429,7 +429,7 @@ resource-config:
       id: automatic
     max_in_flight: 1
   mysql_proxy:
-    instances: automatic
+    instances: 1
     instance_type:
       id: automatic
     max_in_flight: 1
